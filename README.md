@@ -1,2 +1,3 @@
-# unit-testing
-A playground for exploring unit testing.
+## unit-testing
+
+A playground to explore unit testing with Mocha and Chai.
