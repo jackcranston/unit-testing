@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "sku": "0001",
+      "title": "Apple",
+      "description": "A shiny green apple",
+      "price": 0.5,
+      "stock": 23
+    },
+    {
+      "sku": "0002",
+      "title": "Banana",
+      "description": "A ripe banana",
+      "price": 0.45,
+      "stock": 9
+    },
+    {
+      "sku": "0003",
+      "title": "Strawberry",
+      "description": "A juicy red strawberry",
+      "price": 0.23,
+      "stock": 12
+    }
+  ]
+}
