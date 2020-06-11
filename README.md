@@ -15,6 +15,7 @@ The idea behind this is so that all implemented features are testable which:
 - improves code quality
 - encourages simpler code to be written
 - improves scalability as new features can be easily tested against the existing code
+- improves code confidence
 
 **Behaviour-Driven Development (BDD)**
 Behaviour-Driven Development can be seen as an variation of TDD.
@@ -48,7 +49,7 @@ Describe is used to group tests, it takes 2 arguments (test group name, callback
 context("name", function(callback))
 ```
 
-Context is used to give each test within a group (describe) context, it takes 2 arguments (test name, callback function) and is nested inside the describe function.
+Context can be used to give each test within a group (describe) context, it takes 2 arguments (test name, callback function) and is nested inside the describe function.
 
 This is not always needed, it is useful when doing multiple tests on the same function to provide more detail as to what is being tested.
 
@@ -65,9 +66,9 @@ It is used to say what the test should do, it takes 2 arguments (what the test s
 Chain the above together to create the layout of your tests. Like this:
 
 ```javascript
-describe("#function()", function() {
-  context("without arguments", function() {
-    it("should return 0", function() {
+describe("#function()", function () {
+  context("without arguments", function () {
+    it("should return 0", function () {
       // Test will run here
     });
   });
@@ -101,8 +102,8 @@ _TIP: all of the methods are assertion styles despite having different names_
 `assert` is a standard TDD assertion style.
 
 ```javascript
-describe("#sum", function() {
-  it("should return 2", function() {
+describe("#sum", function () {
+  it("should return 2", function () {
     assert.isNumber(2);
   });
 });
@@ -117,8 +118,8 @@ _NOTE: Chai and Node.js' pre-packaged assert are similar in syntax_
 `expect` is a BDD assertion style. It begins with function which makes chaining multiple assertions really simple.
 
 ```javascript
-describe("#sum", function() {
-  it("should return 2", function() {
+describe("#sum", function () {
+  it("should return 2", function () {
     expect(1 + 1).to.equal(2);
   });
 });
@@ -131,8 +132,8 @@ In this example we _expect_ 1 + 1 to equal 2.
 `should` is a BDD assertion style.
 
 ```javascript
-context("the array", function() {
-  it("should have a length of 3", function() {
+context("the array", function () {
+  it("should have a length of 3", function () {
     [1, 3, 0].should.have.lengthOf(3);
   });
 });
